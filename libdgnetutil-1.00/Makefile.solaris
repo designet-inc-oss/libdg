@@ -1,0 +1,23 @@
+LIBNAME=libdgnetutil
+CFLAGS=-g -DSOLARIS
+DYNAMICLIB=$(LIBNAME).so
+STATICLIB=$(LIBNAME).a
+CC=/usr/local/bin/gcc
+
+all:: $(DYNAMICLIB) $(STATICLIB)
+
+$(DYNAMICLIB): $(LIBNAME).c $(LIBNAME).h 
+	$(CC) $(CFLAGS) -shared -fPIC $(LIBNAME).c -o $@
+
+$(STATICLIB): $(LIBNAME).o
+	ar cr $@ $(LIBNAME).o 
+	ranlib $@
+
+$(LIBNAME).o: $(LIBNAME).c $(LIBNAME).h
+	$(CC) $(CFLAGS) -c $(LIBNAME).c
+
+test:
+	cd ../test; make test
+
+clean:
+	rm -f $(DYNAMICLIB) $(STATICLIB) $(LIBNAME).o
