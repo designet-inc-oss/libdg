@@ -14,6 +14,7 @@ There are four types of C library files
 * libdgnetutil (Depends on: libdgconfig, libdgstr)
 
 For libraries with dependencies,
+
 dependencies must be resolved first.
 
 ### libdgconfig
@@ -28,6 +29,7 @@ $ cp libdgconfig.a libdgconfig.so [libdir]/
 ### libdgstr
 
 libdgconfig must be installed first.
+
 After making, place the .a and .so files in the library directory.
 
 ```
@@ -38,6 +40,7 @@ $ cp libdgstr.a libdgstr.so [libdir]/
 ### libdgmail
 
 libdgconfig and libdgstr must be installed first.
+
 After making, place the .a and .so files in the library directory.
 
 ```
@@ -48,6 +51,7 @@ $ cp libdgmail.a libdgmail.so [libdir]/
 ### libdgnetutil
 
 libdgconfig and libdgstr must be installed first.
+
 After making, place the .a and .so files in the library directory.
 
 ```
