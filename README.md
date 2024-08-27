@@ -24,6 +24,7 @@ After making, place the .a and .so files in the library directory.
 ```
 $ make HAVE_STRNDUP="-DHAVE_STRNDUP"
 $ cp libdgconfig.a libdgconfig.so [libdir]/
+$ cp libdgconfig.h [includedir]/
 ```
 
 ### libdgstr
@@ -35,6 +36,7 @@ After making, place the .a and .so files in the library directory.
 ```
 $ make HAVE_STRNDUP="-DHAVE_STRNDUP"
 $ cp libdgstr.a libdgstr.so [libdir]/
+$ cp libdgstr.h [includedir]/
 ```
 
 ### libdgmail
@@ -46,6 +48,7 @@ After making, place the .a and .so files in the library directory.
 ```
 $ make HAVE_STRNDUP="-DHAVE_STRNDUP"
 $ cp libdgmail.a libdgmail.so [libdir]/
+$ cp libdgmail.h [includedir]/
 ```
 
 ### libdgnetutil
@@ -57,4 +60,5 @@ After making, place the .a and .so files in the library directory.
 ```
 $ make HAVE_STRNDUP="-DHAVE_STRNDUP"
 $ cp libdgnetutil.a libdgnetutil.so [libdir]/
+$ cp libdgnetutil.h [includedir]/
 ```
